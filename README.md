@@ -1,43 +1,43 @@
 # Eriri
 
-## Descrição
+## Description
 
-Este projeto realiza a importação, comparação e exportação de dados entre arquivos CSV e um banco de dados MySQL. Ele carrega dados de dois arquivos, armazena em tabelas distintas, compara os registros e exporta as divergências para um novo arquivo CSV.
+This project performs import, comparison, and export of data between CSV files and a MySQL database. It loads data from two files, stores them in separate tables, compares the records, and exports the differences to a new CSV file.
 
-## Funcionalidades
+## Features
 
-- Limpeza das tabelas do banco de dados.
-- Importação de dados de arquivos CSV para o MySQL.
-- Comparação entre duas tabelas para identificar divergências.
-- Exportação dos dados divergentes para um arquivo `new_data.csv`.
-- Processamento paralelo para maior desempenho.
+- Cleans database tables.
+- Imports data from CSV files into MySQL.
+- Compares two tables to identify differences.
+- Exports differing records to a `new_data.csv` file.
+- Parallel processing for better performance.
 
-## Como usar
+## How to Use
 
-1. **Pré-requisitos**  
+1. **Prerequisites**  
    - Python 3.x  
    - MySQL  
-   - Biblioteca `pymysql`  
-   - Arquivos de dados: `data.txt` (delimitado por tabulação) e `data2.txt` (delimitado por ponto e vírgula)
+   - `pymysql` library  
+   - Data files: `data.txt` (tab-delimited) and `data2.txt` (semicolon-delimited)
 
-2. **Instalação das dependências**  
+2. **Install dependencies**  
    ```bash
    pip install pymysql
    ```
 
-3. **Configuração do banco de dados**  
-   Certifique-se de que o banco `primary_base` e as tabelas `primary_sheet` e `secondary_sheet` existem.
+3. **Database setup**  
+   Make sure the `primary_base` database and the tables `primary_sheet` and `secondary_sheet` exist.
 
-4. **Execução**  
+4. **Execution**  
    ```bash
    python script.py
    ```
-   O script perguntará se deseja limpar as tabelas antes de importar os dados.
+   The script will ask if you want to clear the tables before importing data.
 
-5. **Saída**  
-   - O resultado das divergências será salvo em `new_data.csv`.
+5. **Output**  
+   - The result with the differences will be saved in `new_data.csv`.
 
-## Estrutura dos arquivos de dados
+## Data file structure
 
 - `data.txt`:  
   ```
@@ -52,9 +52,9 @@ Este projeto realiza a importação, comparação e exportação de dados entre 
   2;Mariana
   ```
 
-## Observações
+## Notes
 
-- Edite a função `format_name` em `script.py` para aplicar regras de normalização de nomes, se necessário.
-- Ajuste as credenciais do banco de dados conforme seu ambiente.
+- Edit the `format_name` function in `script.py` to apply name normalization rules if needed.
+- Adjust the database credentials according to your environment.
 
 ---
