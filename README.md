@@ -1,4 +1,4 @@
 # -
 
 ## new test config signed
-test config commit
+test git config
